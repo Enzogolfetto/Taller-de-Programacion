@@ -14,7 +14,7 @@ public class Ej02Jugadores {
         //Paso 2: Declarar la variable vector de double 
         double jugador;
         //Paso 3: Crear el vector para 15 double 
-        int DF=15;
+        int DF=3;
         double [] vector = new double [DF];
         //Paso 4: Declarar indice y variables auxiliares a usar
         int i;
