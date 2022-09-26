@@ -17,7 +17,7 @@ public class Persona {
         edad = unaEdad; 
     }
     
-    public Persona(){
+    public Persona(){ 
      
     }
 
@@ -48,6 +48,11 @@ public class Persona {
     public String toString(){
         String aux; 
         aux = "Mi nombre es " + nombre + ", mi DNI es " + DNI + " y tengo " + edad + " años.";
+        return aux;
+    }
+        public String toString1(){
+        String aux; 
+        aux = "Soy " + nombre + ", mi DNI es " + DNI + " y tengo " + edad + " años.";
         return aux;
     }
     
