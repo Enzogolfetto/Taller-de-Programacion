@@ -46,7 +46,7 @@ public class Ej04 {
          }
         for (i=0;i<dimLF;i++){//se queda solo en el for de J
             for(j=0;j<dimLC;j++){
-            System.out.println ( "Persona con turno el dia "+(i)+ " turno: "+(j)+" " + tabla [i][j].toString1());
+            System.out.println ( "Persona con turno el dia "+(i+1)+ " turno: "+(j+1)+" " + tabla [i][j].toString1());
             }
              System.out.println();
          }
