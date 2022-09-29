@@ -3,21 +3,18 @@ Clase Libro a la cual se agregaron constructores.
  */
 package tema3;
 
-/**
- *
- * @author vsanz
- */
+
 public class Libro {
    private String titulo;
-   private String primerAutor; 
+   private Autor primerAutor; 
    private String editorial;
    private int añoEdicion;
    private String ISBN; 
    private double precio; 
      
-    
+    //Constructor 1 carga el objeto libro por parametro
     public Libro(  String unTitulo,  String unaEditorial, 
-    int unAñoEdicion,  String unPrimerAutor, String unISBN, double unPrecio){
+    int unAñoEdicion,  Autor unPrimerAutor, String unISBN, double unPrecio){
          titulo = unTitulo;
          editorial = unaEditorial; 
          añoEdicion= unAñoEdicion;
@@ -25,8 +22,9 @@ public class Libro {
          ISBN =  unISBN;
          precio = unPrecio;
     }
-    
-    public Libro(  String unTitulo,  String unaEditorial, String unPrimerAutor, String unISBN){
+    //constructor 2 carga el objeto libro por parametro pero algunos "Campos" los carga con 
+    //Valores definidos aca como por ejemplo 2015 y 100 (año y precio)
+    public Libro(  String unTitulo,  String unaEditorial, Autor unPrimerAutor, String unISBN){
          titulo = unTitulo;
          editorial = unaEditorial; 
          añoEdicion= 2015;
@@ -34,7 +32,8 @@ public class Libro {
          ISBN =  unISBN;
          precio = 100;
     }
-    
+    //Constuctor vacio sirve para cargar el objeto con los valores por defecto de 
+    //los tipos de datos que teiene el objeto.
     public Libro(){
    
     }
@@ -50,7 +49,7 @@ public class Libro {
         return añoEdicion;
     }
   
-    public String getPrimerAutor(){
+    public Autor getPrimerAutor(){
         return primerAutor;
     } 
     public String getISBN(){
@@ -71,7 +70,7 @@ public class Libro {
          añoEdicion = unAño;
     }
    
-    public void setPrimerAutor(String unPrimerAutor){
+    public void setPrimerAutor(Autor unPrimerAutor){
          primerAutor=unPrimerAutor;
     } 
     public void setISBN(String unISBN){
@@ -85,7 +84,7 @@ public class Libro {
    @Override
     public String toString(){
         String aux;
-        aux= titulo + " por " + primerAutor + " - " + añoEdicion + " - " + " ISBN: " + ISBN;
+        aux= "Titulo "+titulo + " por " + this.primerAutor.toString() + " Año de edicion " + añoEdicion + " , " + " ISBN: " + ISBN;
        return ( aux);
     }
         
